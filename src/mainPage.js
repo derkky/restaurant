@@ -1,4 +1,5 @@
-import {loadWebsiteElements} from "./websiteElements.js"
+import {loadWebsiteElements, clearPage} from "./websiteElements.js"
+import {loadMenuPage} from "./menu.js"
 
 
 // create main page
@@ -13,6 +14,18 @@ const createMainImage = function(){
 	mainImageBox.appendChild(mainImage)
 
 	return mainImageBox
+}
+
+const createDiscoverMenu = function(){
+	const discoverMenu = document.createElement("button")
+	discoverMenu.classList.add("siteButton")
+	discoverMenu.innerText = "Discover Menu"
+	discoverMenu.onclick = function(){
+		clearPage()
+		loadMenuPage()
+	}
+
+	return discoverMenu
 }
 
 const createNameBox = function(){
@@ -45,7 +58,9 @@ const loadMainPage = function(){
 
 	const mainImage = createMainImage()
 	const nameBox = createNameBox()
+	const discoverMenu = createDiscoverMenu()
 
+	nameBox.appendChild(discoverMenu)
 	mainContainer.appendChild(mainImage)
 	mainContainer.appendChild(nameBox)
 

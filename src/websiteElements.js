@@ -46,10 +46,11 @@ const createNavbar = function(){
 	return navbar
 }
 
-const createFooter = function(footerText){
+const createFooter = function(){
 	var footer = document.createElement("div")
 	footer.classList.add("gridItem", "footer")
-	footer.innerText = footerText
+	footer.innerText = "Designed by Don Foh"
+
 
 	return footer
 }
@@ -64,4 +65,4 @@ const loadWebsiteElements = function(){
 	content.appendChild(footer)
 }
 
-export {loadWebsiteElements}
+export {loadWebsiteElements, clearPage}

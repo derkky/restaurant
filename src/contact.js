@@ -26,7 +26,7 @@ const createContactInfo = function(label, message){
 	const contactInfoText = document.createElement("span")
 	contactInfoText.classList.add("contactInfoText")
 	contactInfoText.name = label
-	contactInfoText.innerText = message
+	contactInfoText.innerHTML = message
 
 	const contactInfoLabel = document.createElement("label")
 	contactInfoLabel.classList.add("contactInfoLabel")
@@ -42,14 +42,14 @@ const createContactInfo = function(label, message){
 const createContactText = function(){
 	const contactText = document.createElement("div")
 	contactText.classList.add("contactText")
-	contactText.innerText = "contact us now"
+	contactText.innerText = "Contact us now for enquiries and reservations"
 
 	return contactText
 }
 
 const createContactButton = function(){
 	const contactButton = document.createElement("button")
-	contactButton.classList.add("contactButton")
+	contactButton.classList.add("siteButton")
 	contactButton.innerText = "Contact Us"
 
 	contactButton.onclick = () => {
@@ -125,6 +125,7 @@ const createModal = function(){
 
 	const submitButton = document.createElement("input")
 	submitButton.type = "submit"
+	submitButton.classList.add("siteButton")
 
 	inputContainer.appendChild(createInput("Name"))
 	inputContainer.appendChild(createInput("Email"))
@@ -143,8 +144,9 @@ const loadContactPage = function(){
 	const contactContainer = createContactContainer()
 	const contactImage = createContactImage()
 	const contactInfoContainer = createContactInfoContainer()
-	const openingHours = createContactInfo("OPENING HOURS", "blabla")
-	const address = createContactInfo("ADDRESS", "blabla")
+	const openingHours = createContactInfo("OPENING HOURS", "Monday - Friday<br>10:00 - 22:00<br><br>Sunday<br>Closed ")
+	const address = createContactInfo("ADDRESS", "23 Serangoon Central<br>B2-05/06/07/08 NEX<br>Singapore 556083")
+	const phoneNum = createContactInfo("PHONE NUMBER", "1234 5678")
 	const contactButton = createContactButton()
 	const contactText = createContactText()
 
@@ -152,6 +154,8 @@ const loadContactPage = function(){
 
 	contactInfoContainer.appendChild(openingHours)
 	contactInfoContainer.appendChild(address)
+	contactInfoContainer.appendChild(phoneNum)
+
 	contactInfoContainer.appendChild(contactText)
 	contactInfoContainer.appendChild(contactButton)
 
