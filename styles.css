@@ -12,13 +12,13 @@
 }
 
 .navButton:hover {
-  border-bottom: 2px solid #c59d5f;
+  border-bottom: 3px solid #902923;
   cursor: pointer;
 }
 
 .gridContainer {
 	display: grid;
-	grid-template-rows: 10vh 80vh 10vh;
+	grid-template-rows: 7vh 88vh 5vh;
 	width:100vw;
 	height:100vh;
 }
@@ -31,6 +31,9 @@
 .footer {
 	grid-row: 3 / 4;
 	background-color: white;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	box-shadow: 0 -1px 20px grey ;
 }
 
 .gridItem {
@@ -96,6 +99,7 @@
 	*/
 }
 
+/* Main Page */
 .mainPageContainer {
 	display: grid;
 	grid-template-columns: 40% 60%;
@@ -104,7 +108,7 @@
 .nameBox {
 	grid-column: 1 / 2;
 	grid-row: 1;
-	background-color: #8f94ba;
+	background-color: #902923;
 }
 
 .mainImageBox {
@@ -114,7 +118,7 @@
 }
 
 .mainImage {
-	content: url(https://techcrunch.com/wp-content/uploads/2018/07/GettyImages-742168705.jpg?w=600);
+	content: url(https://previews.123rf.com/images/golubovy/golubovy1904/golubovy190401148/121260616-food-assortment-top-view-buffet-dishes-selection-on-restaurant-table-white-plates-with-meals-on-whit.jpg);
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
@@ -125,17 +129,51 @@
 	font-size: 40px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	color: #c59d5f;
+	color: #D6D5C9;
 
 }
 
 .tagline {
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #aaa;
+	color: #B9BAA3;
 }
 
+.siteButton {
+	margin: 1em;
+	background-color: #626558; /* chg */
+	border: 1px solid #626558;
+	border-radius: 4px;
+	box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	outline: none;
+	outline: 0;
+	padding: 10px 25px;
+	text-align: center;
+	transform: translateY(0);
+	transition: transform 150ms, box-shadow 150ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
 
+.siteButton:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .siteButton {
+    padding: 10px 30px;
+  }
+}
+
+/* Menu */
 
 .menuPageContainer {
 	display: grid;
@@ -168,7 +206,7 @@
 .menuSectionName{
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bolder;
-	color: #c59d5f;
+	color: #902923;
 	font-size: 1.5em;
 }
 
@@ -202,10 +240,13 @@
 	grid-row: 1 / 2;
 }
 
+/* Contact Page */
+
 
 .contactPageContainer {
 	display: grid;
-	grid-template-rows: 50% 50%;
+	grid-template-rows: 40% 60%;
+	overflow: auto;
 }
 
 .contactImageBox {
@@ -214,7 +255,7 @@
 }
 
 .contactImage {
-	content: url(https://techcrunch.com/wp-content/uploads/2018/07/GettyImages-742168705.jpg?w=600);
+	content: url(https://static01.nyt.com/images/2020/08/05/dining/03chefs4/03chefs4-superJumbo.jpg?quality=75&auto=webp);
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
@@ -235,22 +276,26 @@
 
 .contactInfoText {
 	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
 }
 
 .contactInfoLabel {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
-	color: #c59d5f;
+	color: #902923;
 	font-weight: bold;
 }
 
 .contactText {
-
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
 }
 
 .contactButton {
 	
 }
+
+/* Modal */
 
 .modal {
   display: none; /* Hidden by default */
@@ -302,6 +347,8 @@
 .input {
 	/* font */
 	width: 40%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
 }
 
 .inputElement {
